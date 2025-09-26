@@ -4,12 +4,37 @@
   <meta charset="UTF-8">
   <title>Portfolio BTS SIO SISR</title>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+      padding: 0 15px;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: #3498db;
+      color: white;
+    }
+
+    header h1, header h2, header p {
+      margin: 5px 0;
+    }
+
     /* --- Timeline --- */
     .timeline {
       position: relative;
       max-width: 900px;
-      margin: 0 auto;
+      margin: 0 auto 50px auto; /* ajout d’un espace en bas */
+      overflow: hidden; /* empêche les décalages */
     }
+
     .timeline::after {
       content: '';
       position: absolute;
@@ -20,11 +45,14 @@
       left: 50%;
       margin-left: -3px;
     }
+
     .container {
       padding: 15px 30px;
       position: relative;
       width: 50%;
+      box-sizing: border-box; /* corrige le dépassement */
     }
+
     .container::after {
       content: '';
       position: absolute;
@@ -37,15 +65,19 @@
       border-radius: 50%;
       z-index: 1;
     }
+
     .left {
       left: 0;
     }
+
     .right {
       left: 50%;
     }
+
     .right::after {
       left: -10px;
     }
+
     .content {
       padding: 20px;
       background-color: #f1f1f1;
@@ -53,10 +85,12 @@
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
+
     h3 {
       margin-top: 0;
       color: #3498db;
     }
+
     /* Responsive */
     @media screen and (max-width: 768px) {
       .container {
@@ -158,7 +192,7 @@
     <section>
       <h2>Métiers recherchés</h2>
       <p>Exemple : Administrateur système et réseau.</p>
-      <p><a href="#">Voir ma carte heuristique</a></p>
+      <p><a href="carte.html" target="_blank">Voir ma carte heuristique</a></p>
     </section>
 
     <section>
