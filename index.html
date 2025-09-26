@@ -1,9 +1,79 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8">
-    <title>Portfolio BTS SIO SISR</title>
-  </head>
+  <meta charset="UTF-8">
+  <title>Portfolio BTS SIO SISR</title>
+  <style>
+    /* --- Timeline --- */
+    .timeline {
+      position: relative;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      background-color: #3498db;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -3px;
+    }
+    .container {
+      padding: 15px 30px;
+      position: relative;
+      width: 50%;
+    }
+    .container::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: -10px;
+      background-color: #3498db;
+      border: 3px solid #fff;
+      top: 15px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .left {
+      left: 0;
+    }
+    .right {
+      left: 50%;
+    }
+    .right::after {
+      left: -10px;
+    }
+    .content {
+      padding: 20px;
+      background-color: #f1f1f1;
+      position: relative;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h3 {
+      margin-top: 0;
+      color: #3498db;
+    }
+    /* Responsive */
+    @media screen and (max-width: 768px) {
+      .container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      .container::after {
+        left: 60px;
+      }
+      .right {
+        left: 0%;
+      }
+    }
+  </style>
+</head>
+
   <body>
     <header>
       <h1>Étudiante en informatique</h1>
@@ -28,13 +98,41 @@
     </section>
 
     <section>
-      <h2>Historique du parcours</h2>
-      <div style="text-align:center;">
-        <img src="timeline.png" 
-             alt="Frise chronologique de mon parcours" 
-             style="max-width:100%; height:auto;">
+  <h2>Historique du parcours</h2>
+  <div class="timeline">
+    <div class="container left">
+      <div class="content">
+        <h3>2020</h3>
+        <p>Baccalauréat Littéraire</p>
       </div>
-    </section>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h3>2021</h3>
+        <p>Faculté de droit et science politique - Aix-en-Provence</p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h3>2022 - 2023</h3>
+        <p>Employée commerciale & commerciale terrain</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h3>2023</h3>
+        <p>Séjour linguistique en Écosse</p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h3>2023 - aujourd’hui</h3>
+        <p>BTS SIO option SISR</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <section>
       <h2>Formation actuelle</h2>
