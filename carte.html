@@ -6,102 +6,95 @@
   <!-- CSS MindElixir -->
   <link rel="stylesheet" href="https://unpkg.com/mind-elixir@3.0.2/dist/mind-elixir.css" />
   <!-- JS MindElixir -->
-  <script src="https://unpkg.com/mind-elixir@3.0.2/dist/mind-elixir.js"></script>
+  <script src="https://unpkg.com/mind-elixir@3.0.2/dist/mind-elixir.min.js"></script>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
     }
     #map {
-      width: 100%;
       height: 100vh;
+      width: 100%;
     }
   </style>
 </head>
 <body>
   <div id="map"></div>
+
   <script>
-    const mind = new MindElixir({
-      el: '#map',
-      direction: MindElixir.RIGHT,
-      data: {
-        nodeData: {
-          id: 'root',
-          topic: 'Expert(e) en sécurité informatique',
+    window.onload = function () {
+      const data = MindElixir.new('Expert en sécurité informatique')
+
+      // Ajout de nœuds principaux
+      data.node.children.push(
+        {
+          topic: 'Réseaux',
           children: [
-            {
-              topic: 'Salaire',
-              children: [
-                { topic: 'Débutant : 3080 €' }
-              ]
-            },
-            {
-              topic: 'Entreprise',
-              children: [
-                { topic: 'ESN (Entreprises de services du numérique)' },
-                { topic: 'Sociétés utilisatrices : banques, organismes financiers, industrie, biotechnologies, NTIC, grandes entreprises, administrations' },
-                { topic: 'Tous secteurs : agriculture, BTP, commerce, services, énergie, industrie' }
-              ]
-            },
-            {
-              topic: 'Actions',
-              children: [
-                { topic: 'Traquer les points faibles' },
-                { topic: 'Protéger les informations' },
-                { topic: 'Jouer les interfaces' }
-              ]
-            },
-            {
-              topic: 'Formations',
-              children: [
-                {
-                  topic: 'Diplômes',
-                  children: [
-                    { topic: 'Bac +5 : Master ou diplôme d’ingénieur en sécurité informatique ou SI' },
-                    { topic: 'Bac +6 : Mastère spécialisé cybersécurité' }
-                  ]
-                },
-                {
-                  topic: 'Compétences',
-                  children: [
-                    { topic: 'Connaissances en développement, systèmes, réseaux' },
-                    { topic: 'Maîtrise des normes de sécurité' },
-                    { topic: 'Vision globale du SI et des processus métiers' },
-                    { topic: 'Connaissance juridique en cybersécurité' },
-                    { topic: 'Anglais technique' }
-                  ]
-                },
-                {
-                  topic: 'Évolution',
-                  children: [
-                    { topic: 'Responsable d’équipe' },
-                    { topic: 'Direction d’un système d’information' }
-                  ]
-                }
-              ]
-            },
-            {
-              topic: 'Qualités',
-              children: [
-                { topic: 'Disponible et réactif' },
-                { topic: 'Analyser rapidement les situations' },
-                { topic: 'Organisé et capable de gérer des projets' },
-                { topic: 'Bon communicant et pédagogue' }
-              ]
-            }
+            { topic: 'Protocoles TCP/IP' },
+            { topic: 'Pare-feu' },
+            { topic: 'VPN' },
+            { topic: 'Détection d’intrusion' }
           ]
         },
-        linkData: {},
-        direction: 1,
-      },
-      draggable: true,
-      contextMenu: true,
-      toolBar: true,
-      nodeMenu: true,
-      keypress: true
-    })
-    mind.init()
+        {
+          topic: 'Cryptographie',
+          children: [
+            { topic: 'Chiffrement symétrique' },
+            { topic: 'Chiffrement asymétrique' },
+            { topic: 'Certificats SSL/TLS' },
+            { topic: 'Hachage' }
+          ]
+        },
+        {
+          topic: 'Sécurité des systèmes',
+          children: [
+            { topic: 'Mises à jour logicielles' },
+            { topic: 'Antivirus / Antimalware' },
+            { topic: 'Gestion des accès' },
+            { topic: 'Sécurité des serveurs' }
+          ]
+        },
+        {
+          topic: 'Sécurité des applications',
+          children: [
+            { topic: 'Tests d’intrusion' },
+            { topic: 'OWASP Top 10' },
+            { topic: 'Sécurité des API' },
+            { topic: 'Développement sécurisé' }
+          ]
+        },
+        {
+          topic: 'Conformité & réglementation',
+          children: [
+            { topic: 'RGPD' },
+            { topic: 'ISO 27001' },
+            { topic: 'PCI-DSS' },
+            { topic: 'Audit de sécurité' }
+          ]
+        },
+        {
+          topic: 'Veille & formation',
+          children: [
+            { topic: 'Blogs spécialisés' },
+            { topic: 'Certifications (CEH, CISSP)' },
+            { topic: 'Conférences (Black Hat, DEF CON)' },
+            { topic: 'Formations en ligne' }
+          ]
+        }
+      )
+
+      const mind = new MindElixir({
+        el: '#map',
+        direction: 2,
+        draggable: true,
+        contextMenu: true,
+        toolBar: true,
+        nodeMenu: true,
+        keypress: true,
+        data: data,
+      })
+      mind.init()
+    }
   </script>
 </body>
 </html>
