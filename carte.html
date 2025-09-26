@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Carte heuristique - Expert en sécurité informatique</title>
-  <!-- Version UMD de MindElixir -->
-  <script src="https://cdn.jsdelivr.net/npm/mind-elixir/dist/mind-elixir.umd.js"></script>
+  <!-- Import correct de MindElixir -->
+  <script src="https://cdn.jsdelivr.net/npm/mind-elixir@3.0.2/dist/mind-elixir.js"></script>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -28,18 +28,13 @@
           id: 'root',
           topic: 'Expert(e) en sécurité informatique',
           children: [
-            {
-              topic: 'Salaire',
-              children: [
-                { topic: 'Débutant : 3080 €' }
-              ]
-            },
+            { topic: 'Salaire', children: [ { topic: 'Débutant : 3080 €' } ] },
             {
               topic: 'Entreprise',
               children: [
                 { topic: 'ESN (Entreprises de services du numérique)' },
-                { topic: 'Sociétés utilisatrices : banques, organismes financiers, industrie, biotechnologies, NTIC, grandes entreprises, administrations' },
-                { topic: 'Tous secteurs : agriculture, BTP, commerce, services, énergie, industrie' }
+                { topic: 'Banques, organismes financiers, industrie, NTIC, administrations' },
+                { topic: 'Tous secteurs : agriculture, BTP, commerce, énergie...' }
               ]
             },
             {
@@ -56,16 +51,16 @@
                 {
                   topic: 'Diplômes',
                   children: [
-                    { topic: 'Bac +5 : Master ou diplôme d’ingénieur en sécurité informatique ou SI' },
+                    { topic: 'Bac +5 : Master ou diplôme d’ingénieur' },
                     { topic: 'Bac +6 : Mastère spécialisé cybersécurité' }
                   ]
                 },
                 {
                   topic: 'Compétences',
                   children: [
-                    { topic: 'Connaissances en développement, systèmes, réseaux' },
-                    { topic: 'Maîtrise des normes de sécurité' },
-                    { topic: 'Vision globale du SI et des processus métiers' },
+                    { topic: 'Connaissances en dev, systèmes, réseaux' },
+                    { topic: 'Maîtrise normes de sécurité' },
+                    { topic: 'Vision globale SI et processus métiers' },
                     { topic: 'Connaissance juridique en cybersécurité' },
                     { topic: 'Anglais technique' }
                   ]
@@ -74,7 +69,7 @@
                   topic: 'Évolution',
                   children: [
                     { topic: 'Responsable d’équipe' },
-                    { topic: 'Direction d’un système d’information' }
+                    { topic: 'Direction SI' }
                   ]
                 }
               ]
@@ -89,9 +84,7 @@
               ]
             }
           ]
-        },
-        linkData: {},
-        direction: 1,
+        }
       },
       draggable: true,
       contextMenu: true,
