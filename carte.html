@@ -3,11 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <title>Carte heuristique - Expert en sécurité informatique</title>
-  <script src="https://cdn.jsdelivr.net/npm/mind-elixir/dist/MindElixir.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mind-elixir/dist/mind-elixir.css">
+  <!-- Version UMD de MindElixir -->
+  <script src="https://cdn.jsdelivr.net/npm/mind-elixir/dist/mind-elixir.umd.js"></script>
   <style>
-    body { margin: 0; padding: 0; }
-    #map { width: 100%; height: 100vh; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      width: 100%;
+      height: 100vh;
+    }
   </style>
 </head>
 <body>
@@ -40,10 +47,7 @@
               children: [
                 { topic: 'Traquer les points faibles' },
                 { topic: 'Protéger les informations' },
-                { topic: 'Jouer les interfaces' },
-                { topic: 'Préserver l’identité numérique' },
-                { topic: 'Assurer la confidentialité et la disponibilité des données' },
-                { topic: 'Sensibiliser les utilisateurs' }
+                { topic: 'Jouer les interfaces' }
               ]
             },
             {
@@ -52,27 +56,25 @@
                 {
                   topic: 'Diplômes',
                   children: [
-                    { topic: 'Bac +5 : Master ou diplôme d’ingénieur en cybersécurité / systèmes d’information' },
-                    { topic: 'Bac +6 : Mastère spécialisé cybersécurité (attaque/défense)' },
-                    { topic: 'Diplôme d’ingénieur spécialisé en sécurité des infrastructures et données' }
+                    { topic: 'Bac +5 : Master ou diplôme d’ingénieur en sécurité informatique ou SI' },
+                    { topic: 'Bac +6 : Mastère spécialisé cybersécurité' }
                   ]
                 },
                 {
                   topic: 'Compétences',
                   children: [
-                    { topic: 'Développement, systèmes et réseaux' },
-                    { topic: 'Maîtrise des normes et standards de sécurité' },
+                    { topic: 'Connaissances en développement, systèmes, réseaux' },
+                    { topic: 'Maîtrise des normes de sécurité' },
                     { topic: 'Vision globale du SI et des processus métiers' },
-                    { topic: 'Connaissances juridiques et réglementaires' },
-                    { topic: 'Maîtrise de l’anglais technique' }
+                    { topic: 'Connaissance juridique en cybersécurité' },
+                    { topic: 'Anglais technique' }
                   ]
                 },
                 {
                   topic: 'Évolution',
                   children: [
                     { topic: 'Responsable d’équipe' },
-                    { topic: 'Direction d’un système d’information' },
-                    { topic: 'Chef de projet sécurité' }
+                    { topic: 'Direction d’un système d’information' }
                   ]
                 }
               ]
@@ -81,11 +83,9 @@
               topic: 'Qualités',
               children: [
                 { topic: 'Disponible et réactif' },
-                { topic: 'Capacité d’analyse rapide' },
-                { topic: 'Organisé, gestion de projets' },
-                { topic: 'Bon communicant et pédagogue' },
-                { topic: 'Résistance au stress' },
-                { topic: 'Adaptabilité et esprit d’équipe' }
+                { topic: 'Analyser rapidement les situations' },
+                { topic: 'Organisé et capable de gérer des projets' },
+                { topic: 'Bon communicant et pédagogue' }
               ]
             }
           ]
