@@ -1,100 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// Composant Carte Heuristique
-function CarteHeuristique() {
-  const center = { x: 400, y: 300 };
-  const radius = 200;
-
-  const branches = [
-    {
-      title: 'Formation',
-      items: [
-        'Bac +5 recommandé : écoles d’ingénieurs, masters spécialisés',
-        'Accès possible après Bac +2/3 (BTS SIO, BUT, licence)',
-        'Compétences : systèmes, réseaux, cryptographie, outils',
-        'Gestion de projet et droit de l’informatique',
-        'Audits, tests d\'intrusion, plans de continuité',
-        'Évolution : spécialisations (audit, forensic, sécurité applicative)',
-        'Formation continue / veille technologique'
-      ]
-    },
-    {
-      title: 'Entreprise',
-      items: [
-        'Types : ESN, grandes entreprises (banques, télécoms, etc.)',
-        'Secteurs : agriculture, BTP, commerce, énergie, industrie'
-      ]
-    },
-    {
-      title: 'Actions',
-      items: [
-        'Auditer la sécurité des systèmes',
-        'Identifier et corriger les vulnérabilités',
-        'Mettre en place politiques et normes de sécurité',
-        'Répondre aux incidents de sécurité',
-        'Former et sensibiliser les utilisateurs',
-        'Définir une stratégie globale de cybersécurité'
-      ]
-    },
-    {
-      title: 'Qualités',
-      items: [
-        'Rigueur et esprit méthodique',
-        'Réactivité et sang-froid',
-        'Discrétion et respect de la confidentialité',
-        'Esprit d’analyse et de synthèse',
-        'Pédagogie pour sensibiliser les équipes',
-        'Curiosité et goût pour la veille technologique'
-      ]
-    },
-    {
-      title: 'Salaire',
-      items: [
-        'Débutant : ~3 000 € brut/mois',
-        '> 5 000 € brut/mois (selon secteur, responsabilités, certifications)'
-      ]
-    }
-  ];
-
-  return (
-    <div className="flex justify-center items-center">
-      <svg width={800} height={600} className="bg-white shadow-lg rounded-xl">
-        {/* Centre */}
-        <circle cx={center.x} cy={center.y} r={50} fill="#4F46E5" />
-        <text x={center.x} y={center.y} textAnchor="middle" dy="5" fill="white" fontWeight="bold">Expert en sécurité informatique</text>
-
-        {/* Branches */}
-        {branches.map((branch, i) => {
-          const angle = (i / branches.length) * 2 * Math.PI;
-          const x = center.x + radius * Math.cos(angle);
-          const y = center.y + radius * Math.sin(angle);
-
-          return (
-            <g key={i}>
-              <line x1={center.x} y1={center.y} x2={x} y2={y} stroke="#A5B4FC" strokeWidth={2} />
-              <circle cx={x} cy={y} r={40} fill="#E0E7FF" />
-              <text x={x} y={y} textAnchor="middle" dy="-25" fill="#1E3A8A" fontWeight="bold">{branch.title}</text>
-              {branch.items.map((item, j) => {
-                const subAngle = angle - 0.3 + (j * 0.15);
-                const subX = x + 80 * Math.cos(subAngle);
-                const subY = y + 80 * Math.sin(subAngle);
-                return (
-                  <g key={j}>
-                    <line x1={x} y1={y} x2={subX} y2={subY} stroke="#C7D2FE" strokeWidth={1} />
-                    <text x={subX} y={subY} textAnchor="middle" dy="3" fill="#1E3A8A" fontSize="10">{item}</text>
-                  </g>
-                );
-              })}
-            </g>
-          );
-        })}
-      </svg>
-    </div>
-  );
-}
-
-// Composant principal du Portfolio
+// Composant principal du portfolio
 function App() {
   return (
     <div className="min-h-screen bg-gray-100">
@@ -108,14 +15,9 @@ function App() {
           <p className="text-gray-700">Voici un aperçu de mes compétences et réalisations.</p>
         </section>
 
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-center">Carte Heuristique : Expert en Sécurité Informatique</h2>
-          <CarteHeuristique />
-        </section>
-
-        <section className="max-w-3xl">
+        <section className="max-w-3xl w-full">
           <h2 className="text-2xl font-semibold mb-4">Projets récents</h2>
-          {/* ...tes projets ici... */}
+          <p className="text-gray-700">Ici, tu peux lister tes projets récents ou réalisations.</p>
         </section>
       </main>
 
