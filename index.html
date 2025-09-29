@@ -3,82 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <title>Portfolio BTS SIO SISR</title>
+
+  <!-- MindElixir CSS et JS -->
   <link rel="stylesheet" href="https://unpkg.com/mind-elixir/dist/mind-elixir.css" />
   <script defer src="https://unpkg.com/mind-elixir/dist/mind-elixir.js"></script>
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
+    body { font-family: Arial, sans-serif; margin:0; padding:0; }
+    section { max-width:900px; margin:0 auto 40px auto; padding:0 15px; }
+    header { text-align:center; padding:40px 20px; background:#3498db; color:white; }
+    header h1, header h2, header p { margin:5px 0; }
+
+    /* Timeline */
+    .timeline { position:relative; max-width:900px; margin:0 auto 50px auto; overflow:hidden; }
+    .timeline::after { content:''; position:absolute; width:6px; background-color:#3498db; top:0; bottom:0; left:50%; margin-left:-3px; }
+    .container { padding:15px 30px; position:relative; width:50%; box-sizing:border-box; }
+    .container::after { content:''; position:absolute; width:20px; height:20px; right:-10px; background-color:#3498db; border:3px solid #fff; top:15px; border-radius:50%; z-index:1; }
+    .left { left:0; }
+    .right { left:50%; }
+    .right::after { left:-10px; }
+    .content { padding:20px; background-color:#f1f1f1; position:relative; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+    h3 { margin-top:0; color:#3498db; }
+    @media screen and (max-width:768px) {
+      .container { width:100%; padding-left:70px; padding-right:25px; }
+      .container::after { left:60px; }
+      .right { left:0%; }
     }
-    section {
-      max-width: 900px;
-      margin: 0 auto 40px auto;
-      padding: 0 15px;
-    }
-    header {
-      text-align: center;
-      padding: 40px 20px;
-      background: #3498db;
-      color: white;
-    }
-    header h1, header h2, header p {
-      margin: 5px 0;
-    }
-    .timeline {
-      position: relative;
-      max-width: 900px;
-      margin: 0 auto 50px auto;
-      overflow: hidden;
-    }
-    .timeline::after {
-      content: '';
-      position: absolute;
-      width: 6px;
-      background-color: #3498db;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      margin-left: -3px;
-    }
-    .container {
-      padding: 15px 30px;
-      position: relative;
-      width: 50%;
-      box-sizing: border-box;
-    }
-    .container::after {
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      right: -10px;
-      background-color: #3498db;
-      border: 3px solid #fff;
-      top: 15px;
-      border-radius: 50%;
-      z-index: 1;
-    }
-    .left { left: 0; }
-    .right { left: 50%; }
-    .right::after { left: -10px; }
-    .content {
-      padding: 20px;
-      background-color: #f1f1f1;
-      position: relative;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    h3 { margin-top: 0; color: #3498db; }
-    @media screen and (max-width: 768px) {
-      .container { width: 100%; padding-left: 70px; padding-right: 25px; }
-      .container::after { left: 60px; }
-      .right { left: 0%; }
-    }
-    /* Style pour la mindmap */
+
+    /* Carte heuristique */
     #map { height:600px; width:100%; border:1px solid #ccc; margin-top:20px; }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -89,29 +45,35 @@
 
 <section>
   <h2>Présentation personnelle</h2>
-  <p>
-    Après l’obtention de mon baccalauréat littéraire en 2020, j’ai intégré la faculté de droit et de science politique d’Aix-en-Provence en 2021...
-  </p>
-  <!-- Ton texte complet ici -->
+  <p>Après l’obtention de mon baccalauréat littéraire en 2020, j’ai intégré la faculté de droit et de science politique d’Aix-en-Provence en 2021. Cette expérience m’a permis de comprendre que le domaine juridique ne correspondait pas à mes aspirations. J’ai alors choisi de m’orienter temporairement vers le milieu professionnel en travaillant en tant qu’employée commerciale dans la grande distribution entre 2022 et 2023, ce qui m’a apporté une première expérience enrichissante.</p>
+  <p>En parallèle, j’ai eu l’opportunité d’effectuer un séjour linguistique en Écosse afin de perfectionner mon anglais, puis j’ai travaillé quelques mois comme commerciale terrain. Aujourd’hui, je poursuis mes études en BTS SIO option SISR, tout en occupant un poste étudiant de caissière.</p>
+  <p>Depuis toujours passionnée par l’informatique et les nouvelles technologies – notamment à travers mon intérêt pour les jeux vidéo – j’ai choisi de m’orienter vers la cybersécurité, un domaine en constante évolution. Ce qui m’attire particulièrement est la protection des données, la prévention des cyberattaques et la contribution à la sécurité des organisations.</p>
+  <p>Mon objectif est de poursuivre mes études après le BTS vers un parcours universitaire en cybersécurité (licence professionnelle puis master), afin d’obtenir un bac+5 et d’exercer idéalement le métier d’ingénieure en cybersécurité en entreprise.</p>
 </section>
 
 <section>
   <h2>Historique du parcours</h2>
   <div class="timeline">
-    <!-- Timeline complète ici -->
+    <div class="container left"><div class="content"><h3>2020</h3><p>Baccalauréat Littéraire</p></div></div>
+    <div class="container right"><div class="content"><h3>2021</h3><p>Faculté de droit et science politique Aix-en-Provence</p></div></div>
+    <div class="container left"><div class="content"><h3>2022-2023</h3><p>Employée commerciale</p></div></div>
+    <div class="container right"><div class="content"><h3>2024</h3><p>Séjour linguistique en Écosse</p></div></div>
+    <div class="container left"><div class="content"><h3>2025</h3><p>BTS SIO option SISR</p></div></div>
   </div>
 </section>
 
 <section>
   <h2>Formation actuelle</h2>
-  <p>...</p>
+  <p>L’option « Solutions d’Infrastructure, Systèmes et Réseaux » (SISR) du BTS Services Informatiques aux Organisations forme des professionnels capables de concevoir, mettre en œuvre et maintenir des infrastructures informatiques fiables et sécurisées. Le titulaire de ce diplôme participe activement à la production et à la fourniture de services informatiques en réalisant ou en adaptant des solutions d’infrastructure, en administrant les systèmes et réseaux, et en garantissant leur fonctionnement optimal.</p>
+  <p>Ses missions couvrent un large champ de compétences. Il installe, configure et administre des postes de travail, des serveurs et des équipements d’interconnexion, tout en assurant leur sécurisation. Il déploie des solutions de virtualisation, de stockage et d’hébergement, et gère l’intégration d’architectures réseaux locales ou distantes. Il supervise et exploite les infrastructures mises en place afin de garantir leur performance et leur disponibilité, en intervenant sur la maintenance, la détection et la résolution d’incidents.</p>
 </section>
 
 <section>
   <h2>Métiers recherchés</h2>
   <p>Exemple : Administrateur système et réseau.</p>
+  <p>Ma carte heuristique des métiers et compétences est présentée ci-dessous :</p>
 
-  <!-- Mindmap intégrée directement -->
+  <!-- Carte heuristique intégrée -->
   <div id="map"></div>
 </section>
 
@@ -147,17 +109,13 @@
 <section>
   <h2>Contact</h2>
   <form>
-    <label>Nom :</label><br>
-    <input type="text"><br>
-    <label>Email :</label><br>
-    <input type="email"><br>
-    <label>Message :</label><br>
-    <textarea></textarea><br>
+    <label>Nom :</label><br><input type="text"><br>
+    <label>Email :</label><br><input type="email"><br>
+    <label>Message :</label><br><textarea></textarea><br>
     <button type="submit">Envoyer</button>
   </form>
 </section>
 
-<!-- Script pour initialiser la mindmap -->
 <script defer>
 document.addEventListener("DOMContentLoaded", function() {
   const data = {
@@ -168,13 +126,10 @@ document.addEventListener("DOMContentLoaded", function() {
       "1":{
         "title":"Nom du métier",
         "ideas":{
-          "1":{
-            "title":"Formation",
-            "ideas":{
+          "1":{"title":"Formation","ideas":{
               "1":{"title":"Diplômes : BTS SIO SISR, Certification CEH"},
               "2":{"title":"Compétences : Administration réseaux, Gestion systèmes, Cybersécurité"}
-            }
-          },
+          }},
           "4":{"title":"Évolution : Technicien → Administrateur → Ingénieur sécurité"},
           "7":{"title":"Qualités : Curiosité, Rigueur, Réactivité, Esprit d’analyse"},
           "-1":{"title":"Salaire : 28k€ → 50k€ selon expérience"},
