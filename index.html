@@ -4,10 +4,6 @@
   <meta charset="UTF-8">
   <title>Portfolio BTS SIO SISR</title>
 
-  <!-- MindElixir CSS et JS -->
-  <link rel="stylesheet" href="https://unpkg.com/mind-elixir/dist/mind-elixir.css" />
-  <script defer src="https://unpkg.com/mind-elixir/dist/mind-elixir.js"></script>
-
   <style>
     body { font-family: Arial, sans-serif; margin:0; padding:0; }
     section { max-width:900px; margin:0 auto 40px auto; padding:0 15px; }
@@ -29,9 +25,6 @@
       .container::after { left:60px; }
       .right { left:0%; }
     }
-
-    /* Carte heuristique */
-    #map { height:600px; width:100%; border:1px solid #ccc; margin-top:20px; }
   </style>
 </head>
 
@@ -69,11 +62,76 @@
 
 <section>
   <h2>Métiers recherchés</h2>
-  <p>Mon projet : Ingénieure en cybersécurité.</p>
-  <p>Carte heuristique des métiers et compétences :</p>
+  <div style="display:flex; justify-content:center; margin:40px 0;">
+    <div style="position:relative; width:800px; height:600px;">
 
-  <!-- Carte heuristique intégrée -->
-  <div id="map"></div>
+      <!-- Centre -->
+      <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+                  background:#3498db; color:white; padding:20px 30px; border-radius:50%; font-weight:bold; text-align:center;">
+        Expert en sécurité informatique
+      </div>
+
+      <!-- Branches -->
+      <div style="position:absolute; top:5%; left:50%; transform:translateX(-50%);
+                  background:#2ecc71; padding:10px 15px; border-radius:20px; width:220px;">
+        <strong>Formation</strong>
+        <ul style="margin:10px 0 0 15px; font-size:14px;">
+          <li>Bac+5 recommandé (ingénieur, master)</li>
+          <li>Accès après Bac+2/3 (BTS SIO, BUT, Licence)</li>
+          <li>Compétences : systèmes, réseaux, cryptographie</li>
+          <li>Gestion de projet, droit informatique</li>
+          <li>Audits, tests d’intrusion, plans de continuité</li>
+          <li>Évolution : audit, forensic, sécurité applicative</li>
+          <li>Formation continue / veille technologique</li>
+        </ul>
+      </div>
+
+      <div style="position:absolute; top:25%; left:5%;
+                  background:#e67e22; padding:10px 15px; border-radius:20px; width:200px;">
+        <strong>Entreprise</strong>
+        <ul style="margin:10px 0 0 15px; font-size:14px;">
+          <li>Types : ESN, grandes entreprises</li>
+          <li>Secteurs : banque, télécom, BTP, industrie</li>
+        </ul>
+      </div>
+
+      <div style="position:absolute; bottom:10%; left:5%;
+                  background:#9b59b6; padding:10px 15px; border-radius:20px; width:220px;">
+        <strong>Actions</strong>
+        <ul style="margin:10px 0 0 15px; font-size:14px;">
+          <li>Auditer la sécurité</li>
+          <li>Identifier/corriger vulnérabilités</li>
+          <li>Mettre en place politiques de sécurité</li>
+          <li>Répondre aux incidents</li>
+          <li>Former et sensibiliser</li>
+          <li>Définir stratégie cybersécurité</li>
+        </ul>
+      </div>
+
+      <div style="position:absolute; bottom:10%; right:5%;
+                  background:#f39c12; padding:10px 15px; border-radius:20px; width:220px;">
+        <strong>Qualités</strong>
+        <ul style="margin:10px 0 0 15px; font-size:14px;">
+          <li>Rigueur, méthode</li>
+          <li>Réactivité, sang-froid</li>
+          <li>Discrétion</li>
+          <li>Analyse et synthèse</li>
+          <li>Pédagogie</li>
+          <li>Curiosité et veille techno</li>
+        </ul>
+      </div>
+
+      <div style="position:absolute; top:25%; right:5%;
+                  background:#e74c3c; padding:10px 15px; border-radius:20px; width:200px;">
+        <strong>Salaire</strong>
+        <ul style="margin:10px 0 0 15px; font-size:14px;">
+          <li>Débutant : ~3 000 € brut/mois</li>
+          <li>Expérience : &gt; 5 000 € brut/mois</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
 </section>
 
 <section>
@@ -116,65 +174,6 @@
     <button type="submit">Envoyer</button>
   </form>
 </section>
-
-<script defer>
-document.addEventListener("DOMContentLoaded", function() {
-  const data = {
-    "formatVersion": 3,
-    "id": "root",
-    "title": "Expert en sécurité informatique",
-    "ideas": {
-      "1": { "title": "Formation", "ideas": {
-        "1": {"title":"Bac +5 : écoles d’ingénieurs, masters spécialisés"},
-        "2": {"title":"Accès après Bac +2/3 : BTS SIO, BUT, licence"},
-        "3": {"title":"Compétences : réseaux, systèmes, cryptographie"},
-        "4": {"title":"Gestion de projet et droit informatique"},
-        "5": {"title":"Audits, tests d’intrusion, plans de continuité"},
-        "6": {"title":"Évolution : audit, forensic, sécurité applicative"},
-        "7": {"title":"Formation continue et veille technologique"}
-      }},
-      "2": { "title": "Entreprise", "ideas": {
-        "1": {"title":"Types : ESN, grandes entreprises"},
-        "2": {"title":"Secteurs : banque, télécoms, énergie, industrie"}
-      }},
-      "3": { "title": "Actions", "ideas": {
-        "1": {"title":"Auditer la sécurité des systèmes"},
-        "2": {"title":"Identifier et corriger les vulnérabilités"},
-        "3": {"title":"Mettre en place normes et politiques"},
-        "4": {"title":"Répondre aux incidents"},
-        "5": {"title":"Former et sensibiliser les utilisateurs"},
-        "6": {"title":"Définir une stratégie globale de cybersécurité"}
-      }},
-      "4": { "title": "Qualités", "ideas": {
-        "1": {"title":"Rigueur, esprit méthodique"},
-        "2": {"title":"Réactivité, sang-froid"},
-        "3": {"title":"Discrétion et confidentialité"},
-        "4": {"title":"Analyse et synthèse"},
-        "5": {"title":"Pédagogie et communication"},
-        "6": {"title":"Curiosité et veille technologique"}
-      }},
-      "5": { "title": "Salaire", "ideas": {
-        "1": {"title":"Débutant : ~3000€ brut/mois"},
-        "2": {"title":">5000€ brut/mois selon expérience"}
-      }}
-    },
-    "attr": {"theme": "default"}
-  };
-
-  const mind = new MindElixir({
-    el: '#map',
-    direction: 2,
-    draggable: true,
-    contextMenu: true,
-    toolBar: true,
-    nodeMenu: true,
-    keypress: true,
-    data: data
-  });
-
-  mind.init();
-});
-</script>
 
 </body>
 </html>
