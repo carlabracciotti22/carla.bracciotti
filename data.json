@@ -1,0 +1,111 @@
+{
+  "formatVersion": 3,
+  "id": "root",
+  "ideas": {
+    "1": {
+      "title": "Nom du métier",
+      "id": 1,
+      "attr": {
+        "position": [
+          -29,
+          -15,
+          1
+        ],
+        "style": {
+          "width": 137
+        }
+      },
+      "ideas": {
+        "1": {
+          "title": "Formation",
+          "id": "4.86da.e8b1cc456-fa49.a90d32456",
+          "ideas": {
+            "1": {
+              "title": "Diplomes",
+              "id": "13.86da.e8b1cc456-fa49.a90d32456",
+              "attr": {
+                "position": [
+                  41,
+                  -69,
+                  2
+                ]
+              }
+            },
+            "2": {
+              "title": "Compétences",
+              "id": "14.86da.e8b1cc456-fa49.a90d32456",
+              "attr": {
+                "position": [
+                  60,
+                  67,
+                  3
+                ]
+              }
+            }
+          },
+          "attr": {
+            "position": [
+              127,
+              -158,
+              20
+            ]
+          }
+        },
+        "4": {
+          "title": "Evolution",
+          "id": "12.86da.e8b1cc456-fa49.a90d32456",
+          "attr": {
+            "position": [
+              180,
+              1,
+              19
+            ]
+          }
+        },
+        "7": {
+          "title": "Qualités",
+          "id": "10.86da.e8b1cc456-fa49.a90d32456",
+          "attr": {
+            "position": [
+              180,
+              113,
+              21
+            ]
+          }
+        },
+        "-1": {
+          "title": "Salaire",
+          "id": "7.86da.e8b1cc456-fa49.a90d32456",
+          "attr": {
+            "position": [
+              178,
+              -101,
+              10
+            ]
+          }
+        },
+        "-12": {
+          "title": "Actions",
+          "id": "11.86da.e8b1cc456-fa49.a90d32456",
+          "attr": {
+            "position": [
+              159,
+              109,
+              16
+            ]
+          }
+        },
+        "-7": {
+          "title": "Entreprise",
+          "id": "8.86da.e8b1cc456-fa49.a90d32456",
+          "attr": {}
+        }
+      }
+    }
+  },
+  "attr": {
+    "theme": "default"
+  },
+  "title": "Nom du métier",
+  "links": []
+}
