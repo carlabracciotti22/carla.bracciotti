@@ -65,13 +65,12 @@
 <section>
   <h2>Formation actuelle</h2>
   <p>L’option « Solutions d’Infrastructure, Systèmes et Réseaux » (SISR) du BTS Services Informatiques aux Organisations forme des professionnels capables de concevoir, mettre en œuvre et maintenir des infrastructures informatiques fiables et sécurisées. Le titulaire de ce diplôme participe activement à la production et à la fourniture de services informatiques en réalisant ou en adaptant des solutions d’infrastructure, en administrant les systèmes et réseaux, et en garantissant leur fonctionnement optimal.</p>
-  <p>Ses missions couvrent un large champ de compétences. Il installe, configure et administre des postes de travail, des serveurs et des équipements d’interconnexion, tout en assurant leur sécurisation. Il déploie des solutions de virtualisation, de stockage et d’hébergement, et gère l’intégration d’architectures réseaux locales ou distantes. Il supervise et exploite les infrastructures mises en place afin de garantir leur performance et leur disponibilité, en intervenant sur la maintenance, la détection et la résolution d’incidents.</p>
 </section>
 
 <section>
   <h2>Métiers recherchés</h2>
-  <p>Exemple : Administrateur système et réseau.</p>
-  <p>Ma carte heuristique des métiers et compétences est présentée ci-dessous :</p>
+  <p>Mon projet : Ingénieure en cybersécurité.</p>
+  <p>Carte heuristique des métiers et compétences :</p>
 
   <!-- Carte heuristique intégrée -->
   <div id="map"></div>
@@ -84,6 +83,8 @@
     <li>Support et gestion des tickets (GLPI)</li>
     <li>Configuration réseaux Cisco (CLI)</li>
     <li>Administration Windows / Linux</li>
+    <li>Active Directory, GPO</li>
+    <li>Virtualisation et sauvegarde</li>
   </ul>
 </section>
 
@@ -101,8 +102,8 @@
 <section>
   <h2>Veille technologique</h2>
   <ul>
-    <li>Cybersécurité</li>
-    <li>Administration réseaux</li>
+    <li>Cybersécurité (menaces et solutions)</li>
+    <li>Administration réseaux (cloud, virtualisation)</li>
   </ul>
 </section>
 
@@ -119,37 +120,56 @@
 <script defer>
 document.addEventListener("DOMContentLoaded", function() {
   const data = {
-    "formatVersion":3,
-    "id":"root",
-    "title":"Expert en sécurité informatique",
-    "ideas":{
-      "1":{
-        "title":"Nom du métier",
-        "ideas":{
-          "1":{"title":"Formation","ideas":{
-              "1":{"title":"Diplômes : BTS SIO SISR, Certification CEH"},
-              "2":{"title":"Compétences : Administration réseaux, Gestion systèmes, Cybersécurité"}
-          }},
-          "4":{"title":"Évolution : Technicien → Administrateur → Ingénieur sécurité"},
-          "7":{"title":"Qualités : Curiosité, Rigueur, Réactivité, Esprit d’analyse"},
-          "-1":{"title":"Salaire : 28k€ → 50k€ selon expérience"},
-          "-12":{"title":"Actions : Veille technologique, Formations, Projets"},
-          "-7":{"title":"Entreprise : SSII, Banque, Grande entreprise"}
-        }
-      }
+    "formatVersion": 3,
+    "id": "root",
+    "title": "Expert en sécurité informatique",
+    "ideas": {
+      "1": { "title": "Formation", "ideas": {
+        "1": {"title":"Bac +5 : écoles d’ingénieurs, masters spécialisés"},
+        "2": {"title":"Accès après Bac +2/3 : BTS SIO, BUT, licence"},
+        "3": {"title":"Compétences : réseaux, systèmes, cryptographie"},
+        "4": {"title":"Gestion de projet et droit informatique"},
+        "5": {"title":"Audits, tests d’intrusion, plans de continuité"},
+        "6": {"title":"Évolution : audit, forensic, sécurité applicative"},
+        "7": {"title":"Formation continue et veille technologique"}
+      }},
+      "2": { "title": "Entreprise", "ideas": {
+        "1": {"title":"Types : ESN, grandes entreprises"},
+        "2": {"title":"Secteurs : banque, télécoms, énergie, industrie"}
+      }},
+      "3": { "title": "Actions", "ideas": {
+        "1": {"title":"Auditer la sécurité des systèmes"},
+        "2": {"title":"Identifier et corriger les vulnérabilités"},
+        "3": {"title":"Mettre en place normes et politiques"},
+        "4": {"title":"Répondre aux incidents"},
+        "5": {"title":"Former et sensibiliser les utilisateurs"},
+        "6": {"title":"Définir une stratégie globale de cybersécurité"}
+      }},
+      "4": { "title": "Qualités", "ideas": {
+        "1": {"title":"Rigueur, esprit méthodique"},
+        "2": {"title":"Réactivité, sang-froid"},
+        "3": {"title":"Discrétion et confidentialité"},
+        "4": {"title":"Analyse et synthèse"},
+        "5": {"title":"Pédagogie et communication"},
+        "6": {"title":"Curiosité et veille technologique"}
+      }},
+      "5": { "title": "Salaire", "ideas": {
+        "1": {"title":"Débutant : ~3000€ brut/mois"},
+        "2": {"title":">5000€ brut/mois selon expérience"}
+      }}
     },
-    "attr":{"theme":"default"}
+    "attr": {"theme": "default"}
   };
 
   const mind = new MindElixir({
-    el:'#map',
-    direction:2,
-    draggable:true,
-    contextMenu:true,
-    toolBar:true,
-    nodeMenu:true,
-    keypress:true,
-    data:data
+    el: '#map',
+    direction: 2,
+    draggable: true,
+    contextMenu: true,
+    toolBar: true,
+    nodeMenu: true,
+    keypress: true,
+    data: data
   });
 
   mind.init();
