@@ -3,46 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <title>Carte heuristique - Nom du métier</title>
-
-  <!-- CSS MindElixir -->
   <link rel="stylesheet" href="https://unpkg.com/mind-elixir@3.0.2/dist/mind-elixir.css" />
-
-  <!-- JS MindElixir -->
   <script src="https://unpkg.com/mind-elixir@3.0.2/dist/mind-elixir.min.js"></script>
-
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-    #map {
-      height: 100vh;
-      width: 100%;
-    }
+    body { margin:0; font-family:Arial,sans-serif; }
+    #map { height:100vh; width:100%; }
   </style>
 </head>
 <body>
   <div id="map"></div>
-
   <script>
     window.onload = function () {
-      // On charge le fichier JSON externe
-      fetch("data.json")
-        .then(res => res.json())
-        .then(data => {
-          // Création de la carte heuristique avec les données
-          const mind = new MindElixir({
-            el: '#map',
-            direction: 2,   // 1 = gauche, 2 = droite, 3 = bidirectionnel
-            draggable: true,
-            contextMenu: true,
-            toolBar: true,
-            nodeMenu: true,
-            keypress: true,
-            data: data,     // 👉 on utilise ton data.json
-          })
-          mind.init()
-        })
+      const data = {
+        "formatVersion": 3,
+        "id": "root",
+        "title": "Nom du métier",
+        "ideas": {
+          "1": {
+            "title": "Nom du métier",
+            "ideas": {
+              "1": {
+                "title": "Formation",
+                "ideas": {
+                  "1": { "title": "Diplomes" },
+                  "2": { "title": "Compétences" }
+                }
+              },
+              "4": { "title": "Evolution" },
+              "7": { "title": "Qualités" },
+              "-1": { "title": "Salaire" },
+              "-12": { "title": "Actions" },
+              "-7": { "title": "Entreprise" }
+            }
+          }
+        },
+        "attr": { "theme": "default" },
+        "links": []
+      };
+
+      const mind = new MindElixir({
+        el: '#map',
+        direction: 2,       // 1 = gauche, 2 = droite, 3 = bidirectionnel
+        draggable: true,
+        contextMenu: true,
+        toolBar: true,
+        nodeMenu: true,
+        keypress: true,
+        data: data
+      });
+
+      mind.init();
     }
   </script>
 </body>
