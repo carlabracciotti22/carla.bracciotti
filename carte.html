@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Carte heuristique - Nom du métier</title>
-  <!-- CSS MindElixir -->
   <link rel="stylesheet" href="https://unpkg.com/mind-elixir/dist/mind-elixir.css" />
   <style>
-    body { margin:0; font-family:Arial, sans-serif; }
+    body { margin:0; font-family:Arial,sans-serif; }
     #map { height:100vh; width:100%; }
   </style>
 </head>
 <body>
   <div id="map"></div>
 
-  <!-- JS MindElixir chargé avec defer pour s'assurer qu'il est défini avant l'exécution -->
-  <script defer src="https://unpkg.com/mind-elixir/dist/mind-elixir.min.js"></script>
+  <!-- MindElixir stable avec defer -->
+  <script defer src="https://unpkg.com/mind-elixir/dist/mind-elixir.js"></script>
 
+  <!-- Ton script -->
   <script defer>
     document.addEventListener("DOMContentLoaded", function() {
       const data = {
@@ -26,7 +26,13 @@
           "1": {
             "title": "Nom du métier",
             "ideas": {
-              "1": { "title": "Formation", "ideas": { "1": { "title": "Diplomes" }, "2": { "title": "Compétences" } } },
+              "1": {
+                "title": "Formation",
+                "ideas": {
+                  "1": { "title": "Diplomes" },
+                  "2": { "title": "Compétences" }
+                }
+              },
               "4": { "title": "Evolution" },
               "7": { "title": "Qualités" },
               "-1": { "title": "Salaire" },
