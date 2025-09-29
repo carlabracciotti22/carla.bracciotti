@@ -1,32 +1,275 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Portfolio BTS SIO SISR</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        background: #f9f9f9;
+      }
+      header {
+        background: #0d6efd;
+        color: white;
+        text-align: center;
+        padding: 30px 10px;
+      }
+      header h1, header h2 {
+        margin: 5px 0;
+      }
+      section {
+        background: white;
+        margin: 20px auto;
+        padding: 20px;
+        max-width: 900px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      }
+      h2 {
+        color: #0d6efd;
+      }
 
-// Composant principal du portfolio
-function App() {
-  return (
-    <div className="min-h-screen bg-gray-100">
-      <header className="p-6 text-center bg-indigo-600 text-white">
-        <h1 className="text-4xl font-bold">Mon Portfolio</h1>
-      </header>
+      /* --- Timeline --- */
+      .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 20px auto;
+      }
+      .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: #0d6efd;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+      }
+      .container {
+        padding: 10px 40px;
+        position: relative;
+        width: 50%;
+      }
+      .container::after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: -10px;
+        background-color: white;
+        border: 3px solid #0d6efd;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+      .left { left: 0; }
+      .right { left: 50%; }
+      .content {
+        padding: 15px;
+        background-color: #f1f1f1;
+        border-radius: 6px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      }
 
-      <main className="p-8 flex flex-col gap-12 items-center">
-        <section className="text-center max-w-3xl">
-          <h2 className="text-3xl font-semibold mb-4">Bienvenue sur mon portfolio</h2>
-          <p className="text-gray-700">Voici un aperçu de mes compétences et réalisations.</p>
-        </section>
+      /* --- Carte heuristique --- */
+      .carte {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+      }
+      .branche {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        padding: 15px;
+        width: 250px;
+      }
+      .branche h3 {
+        color: #0d6efd;
+        margin-bottom: 10px;
+      }
+      .branche ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+      .branche ul li {
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Étudiante en informatique</h1>
+      <h2>Systèmes et Réseaux</h2>
+      <p>Carla Bracciotti</p>
+    </header>
 
-        <section className="max-w-3xl w-full">
-          <h2 className="text-2xl font-semibold mb-4">Projets récents</h2>
-          <p className="text-gray-700">Ici, tu peux lister tes projets récents ou réalisations.</p>
-        </section>
-      </main>
+    <section>
+      <h2>Présentation personnelle</h2>
+      <p>
+        Après l’obtention de mon baccalauréat en 2020, j’ai intégré la faculté de droit et de science politique d’Aix-en-Provence en 2021. 
+        Cette expérience m’a permis de confirmer que le domaine juridique ne correspondait pas à mes attentes, et j’ai alors décidé de m’orienter vers d’autres horizons. 
+        J’ai ensuite travaillé en tant qu’employée commerciale dans la grande distribution entre 2022 et 2023, ce qui m’a apporté de la rigueur, le sens du service et une première expérience professionnelle enrichissante.
+      </p>
+      <p>
+        En 2024, j’ai choisi d’effectuer un séjour linguistique en Écosse afin de perfectionner mon anglais et de développer une ouverture internationale. 
+        Actuellement, je poursuis mes études en BTS SIO option SISR tout en travaillant comme caissière en parallèle. 
+        Mon objectif est de devenir ingénieure en cybersécurité, en poursuivant mes études vers une licence professionnelle puis un master spécialisé.
+      </p>
+    </section>
 
-      <footer className="p-6 text-center bg-gray-200 text-gray-700">
-        &copy; 2025 Mon Nom
-      </footer>
-    </div>
-  );
-}
+    <section>
+      <h2>Historique du parcours</h2>
+      <div class="timeline">
+        <div class="container left">
+          <div class="content">
+            <h3>2020</h3>
+            <p>Obtention du baccalauréat</p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <h3>2021</h3>
+            <p>Faculté de droit et science politique à Aix-en-Provence</p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <h3>2022 - 2023</h3>
+            <p>Employée commerciale en grande distribution</p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <h3>2024</h3>
+            <p>Séjour linguistique en Écosse</p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="content">
+            <h3>2025</h3>
+            <p>BTS SIO option SISR + emploi étudiant</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+    <section>
+      <h2>Formation actuelle</h2>
+      <p>BTS SIO option SISR : gestion de parc, administration systèmes et réseaux, sécurité, support utilisateurs.</p>
+    </section>
+
+    <section>
+      <h2>Métiers recherchés</h2>
+      <p>Ingénieure en cybersécurité</p>
+    </section>
+
+    <section>
+      <h2>Carte heuristique : Expert en sécurité informatique</h2>
+      <div class="carte">
+        <div class="branche">
+          <h3>Formation</h3>
+          <ul>
+            <li>Bac +5 recommandé : écoles d’ingénieurs, masters spécialisés</li>
+            <li>Accès possible après Bac +2/3 (BTS SIO, BUT, licence)</li>
+            <li>Compétences : systèmes, réseaux, cryptographie, outils</li>
+            <li>Gestion de projet et droit de l’informatique</li>
+            <li>Audits, tests d’intrusion, plans de continuité</li>
+            <li>Évolution : spécialisations (audit, forensic, sécurité applicative)</li>
+            <li>Formation continue / veille technologique</li>
+          </ul>
+        </div>
+
+        <div class="branche">
+          <h3>Entreprise</h3>
+          <ul>
+            <li>Types : ESN, grandes entreprises (banques, télécoms, etc.)</li>
+            <li>Secteurs : agriculture, BTP, commerce, énergie, industrie</li>
+          </ul>
+        </div>
+
+        <div class="branche">
+          <h3>Actions</h3>
+          <ul>
+            <li>Auditer la sécurité des systèmes</li>
+            <li>Identifier et corriger les vulnérabilités</li>
+            <li>Mettre en place politiques et normes de sécurité</li>
+            <li>Répondre aux incidents de sécurité</li>
+            <li>Former et sensibiliser les utilisateurs</li>
+            <li>Définir une stratégie globale de cybersécurité</li>
+          </ul>
+        </div>
+
+        <div class="branche">
+          <h3>Qualités</h3>
+          <ul>
+            <li>Rigueur et esprit méthodique</li>
+            <li>Réactivité et sang-froid</li>
+            <li>Discrétion et respect de la confidentialité</li>
+            <li>Esprit d’analyse et de synthèse</li>
+            <li>Pédagogie pour sensibiliser les équipes</li>
+            <li>Curiosité et goût pour la veille technologique</li>
+          </ul>
+        </div>
+
+        <div class="branche">
+          <h3>Salaire</h3>
+          <ul>
+            <li>Débutant : ~3 000 € brut/mois</li>
+            <li>&gt; 5 000 € brut/mois (selon secteur, responsabilités, certifications)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Compétences en cours d'acquisition</h2>
+      <ul>
+        <li>Gestion de parc (OCS Inventory, GLPI)</li>
+        <li>Support et gestion des tickets (GLPI)</li>
+        <li>Configuration réseaux Cisco (CLI)</li>
+        <li>Administration Windows / Linux</li>
+        <li>Active Directory, GPO</li>
+        <li>Services d’impression et de sauvegarde (Windows Server)</li>
+        <li>Apache2, MariaDB (Debian)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Réalisations</h2>
+      <p><a href="#">Stage (à venir)</a></p>
+      <p><a href="#">Atelier 2 (à venir)</a></p>
+    </section>
+
+    <section>
+      <h2>CV</h2>
+      <p><a href="cv.pdf" target="_blank">Télécharger mon CV en PDF</a></p>
+    </section>
+
+    <section>
+      <h2>Veille technologique</h2>
+      <ul>
+        <li>Cybersécurité (évolution des menaces et solutions)</li>
+        <li>Administration réseaux (virtualisation, cloud, sécurité des infrastructures)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <form>
+        <label>Nom :</label><br>
+        <input type="text"><br>
+        <label>Email :</label><br>
+        <input type="email"><br>
+        <label>Message :</label><br>
+        <textarea></textarea><br>
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+  </body>
+</html>
