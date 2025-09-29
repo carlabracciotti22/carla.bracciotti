@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Carte heuristique - Nom du métier</title>
-  <link rel="stylesheet" href="https://unpkg.com/mind-elixir@3.0.2/dist/mind-elixir.css" />
-  <script src="https://unpkg.com/mind-elixir@3.0.2/dist/mind-elixir.min.js"></script>
+  <!-- CSS MindElixir -->
+  <link rel="stylesheet" href="https://unpkg.com/mind-elixir/dist/mind-elixir.css" />
+  <!-- JS MindElixir -->
+  <script src="https://unpkg.com/mind-elixir/dist/mind-elixir.js"></script>
   <style>
-    body { margin:0; font-family:Arial,sans-serif; }
+    body { margin:0; font-family:Arial, sans-serif; }
     #map { height:100vh; width:100%; }
   </style>
 </head>
@@ -14,6 +16,7 @@
   <div id="map"></div>
   <script>
     window.onload = function () {
+      // Données de la mindmap directement intégrées
       const data = {
         "formatVersion": 3,
         "id": "root",
@@ -41,6 +44,7 @@
         "links": []
       };
 
+      // Initialisation de la carte
       const mind = new MindElixir({
         el: '#map',
         direction: 2,       // 1 = gauche, 2 = droite, 3 = bidirectionnel
